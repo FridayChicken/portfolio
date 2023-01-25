@@ -96,12 +96,20 @@
 
   /* Navbar */
   #navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-pink);
+    background-color: transparent;
     align-items: center;
     color: var(--color-white);
     padding: 16px;
+    transition:  all var(--animation-duration) ease-in-out;
+  }
+
+  #navbar.navbar--dark {
+    background-color: var(--color-pink);
+    padding: 8px;
   }
 
   .navbar__menu {
@@ -142,6 +150,7 @@
   #home {
     background: url("imgs/home-background.png");
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
   }
 
@@ -407,11 +416,11 @@
   }
 
   .testimonial__avatar:nth-child(odd) {
-    margin-right: 48px;
+    margin-right: 40px;
   }
 
   .testimonial__avatar:nth-child(even) {
-    margin-left: 48px;
+    margin-left: 40px;
   }
 
   .testimonial__speech-bubble {
@@ -425,7 +434,7 @@
   }
 
   .testimonial__speech-bubble a {
-    color: var(--color-dark-white);
+    color: var(--color-pink);
   }
 
   /* Contact */
